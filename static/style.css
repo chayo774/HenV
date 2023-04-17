@@ -1,0 +1,50 @@
+body{
+    background:rgb(132, 184, 132);
+}
+.topHeader{
+    position: fixed;
+    background: #e68a11;
+    left:0;
+    top:0;
+    width: 100%;
+}
+.topNav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: green;
+    text-decoration: none;
+}
+.logo img{
+    border-radius: 50%;
+    margin-right: 25px;
+}
+.menu{
+    display: flex;
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
+.menu li{
+    padding: 0 15px;
+}
+.menu a{
+    color: blue;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+}
+.container{
+    margin-top: 80px;
+}
