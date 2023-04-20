@@ -1,0 +1,18 @@
+body{
+    background: #39b3b8;
+}
+.formulario{
+    width: 250px;
+    height: 250px;
+    background: wheat;
+    margin: 80px auto;
+}
+#form{
+    display:flex;
+    flex-direction:column ;
+    color: blue;
+    padding: 10px;
+}
+form input{
+    margin-top: 10px;
+}

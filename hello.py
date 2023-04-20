@@ -19,5 +19,8 @@ def sobreNosotros():
 @app.route("/contact")
 def Contactenos():
     return f"Envienos un email"
+@app.route("/signup/")
+def show_signup_form():
+    return render_template("signup_form.html")
 if __name__ == "__main__":
     app.run(port=4000, debug=True) 
