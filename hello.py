@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 from markupsafe import escape
 
 app=Flask(__name__)
@@ -19,8 +19,17 @@ def sobreNosotros():
 @app.route("/contact")
 def Contactenos():
     return f"Envienos un email"
-@app.route("/signup/")
+@app.route("/signup/", methods=["GET", "POST"])
 def show_signup_form():
-    return render_template("signup_form.html")
+        if request.method == 'POST':
+            name1 = request.form['nom']
+            email = request.form['email']
+            password = request.form['password']
+            next = request.args.get('next', None)
+            print(name1, email, password)
+            if next:
+                return redirect(next)
+            return redirect(url_for('index'))
+        return render_template("signup_form.html")
 if __name__ == "__main__":
     app.run(port=4000, debug=True) 
